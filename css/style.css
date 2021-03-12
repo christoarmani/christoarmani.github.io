@@ -86,7 +86,7 @@ ul li ul li {
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 3.5vw;
     font-weight: bold;
     padding-top: 20px;
     padding-left: 20px;
@@ -97,18 +97,36 @@ p {
     padding: 20px;
 }
 
-div.gear {
-    padding: 20px;
+.gear {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
 }
 
-div.gear ul dt {
-    font-size: 1.2em;
+.gear-text {
+    text-align: center;
 }
 
-div.gear ul li {
-    padding: 5px 5px 5px 0;
-    margin: 15px 15px 15px 15px;
-    list-style-type: disc;
+.gear h2 {
+    text-align: center;
+    font-size: 2.5vw;
+}
+
+div.photo-grid {
+    width: 100%;
+    margin: auto;
+    padding: 30px;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.gallery img {
+    padding: 10px;
 }
 
 footer p {
@@ -145,7 +163,13 @@ footer p {
 
 } */
 
-@media all and (min-width: 880px){
+/* Was prevously 880px */
+@media all and (min-width: 1000px){
+
+    /* header {
+        background-color:  rgb(208, 208, 208);
+    } */
+
     #logo-header {
         width: 25%;
         margin: auto;
@@ -178,7 +202,7 @@ footer p {
     }
 
     nav ul li ul.dropdown {
-        all:initial
+        all:initial;
     }
 
     nav li:hover, nav li:focus-within {
@@ -191,19 +215,60 @@ footer p {
         /* font-weight: bold; */
         cursor: pointer;
     }
+/* End Nav Reset */
 
-    a#active:focus {
+    a.active {
         text-decoration: underline;
     }
 
-/* End Nav Reset */
-
     h1 {
-        padding-left: 11%;
+        text-align: center;
     }
+
+    .gear h2 {
+        text-align: left;
+    }
+
     .body-text {
         max-width: 80%;
         margin: auto;
+    }
+
+    div.photo-grid {
+        width: 600px;
+        margin: auto;
+        padding: 30px;
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .gallery img{
+        padding: 10px;
+        width: 600px;
+    }
+}
+
+@media all and (min-width: 1500px){
+
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /* position: fixed; */
+        height: 163px;
+        background: #FFFFFF;
+    }
+
+    #logo-header {
+        margin: 0;
+        width: 20%;
+    }
+
+    h1 {
+        text-align: center;
     }
 
 }

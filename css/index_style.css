@@ -1,0 +1,157 @@
+main {
+    font-family: Catamaran, san-serif;
+    text-transform: uppercase;
+    overscroll-behavior: none;
+    overflow: hidden;
+  }
+
+  div #logo-header img {
+    /* width: 50%; */
+    margin: auto;
+    position: relative;
+  }
+
+  #nav-content {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(40, 40, 40, .30); */
+  }
+
+  h1 {
+    display: none;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  a:hover {
+    filter: drop-shadow(8px 8px 8px #282828);
+    text-decoration: underline;
+  }
+
+  nav ul li {
+    text-decoration: none;
+    text-align: center;
+    /* font-size: larger; */
+  }
+
+  /* .background-overlay {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  img {
+    min-height: 100%;
+    min-width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    /* filter: grayscale(100%); 
+  } */
+
+  /* animation: backround-transition 10s infinite; */
+
+  body {
+    height: 100vh;
+    animation: gallery 10s infinite;
+    animation-timing-function: ease-in-out;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    overscroll-behavior: none;
+    /* -webkit-transition: backround-transition 3s ease-in-out;
+    -moz-transition: backround-transition 3s ease-in-out;
+    -o-transition: backround-transition 3s ease-in-out;
+    transition: gallery 3s ease-in-out; */
+  }
+
+  @keyframes gallery {
+    0% {
+      opacity: 1;
+      background-image: url("../images/home/3P3A4980-Edit-Edit.jpg");
+    }
+    /* 25% {
+      opacity: 1;
+      background-image: url("../images/home/3P3A4980-Edit-Edit.jpg");
+    }
+    50% {
+      opacity: 1;
+      background-image: url("../images/home/3P3A4756-Edit-Edit-Edit.jpg");
+    } */
+    100% {
+      opacity: 1;
+      background-image: url("../images/home/3P3A4756-Edit-Edit-Edit.jpg");
+    }
+  }
+
+ body:before {
+      background-color:black;
+      opacity:0.3;
+    }
+
+  footer p {
+      display: none;
+      font-family: Catamaran, san-serif;
+      text-align: center;
+  }
+
+  @media all and (min-width: 880px){
+
+    nav ul li {
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    ul {
+      text-align: center;
+    }
+  }
+
+  /* #animated-background{
+    animation: bgfade 15s infinite;
+    background-size:cover;
+    background-position:center;
+    background-color:#000;
+    position:relative; }
+
+    @keyframes bgfade {
+      0% { background-image: url(https://picsum.photos/1200/800?image=1074); }
+      25% { background-image: url(https://picsum.photos/1200/800?image=1070); }
+      50% { background-image: url(https://picsum.photos/1200/800?image=1071); }
+      75% { background-image: url(https://picsum.photos/1200/800?image=1072); }
+      100% { background-image: url(https://picsum.photos/1200/800?image=1074); }
+    } ***** add a background overlay ****** */
+
+    /* #animated-background:before {
+      content:"";
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color:black;
+      opacity:0.3;
+    } */
+
+
+    /* before animation test
+        body {
+      height: 100vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("../images/home/3P3A4980-Edit-Edit.jpg"), url("../images/home/3P3A4756-Edit-Edit-Edit.jpg");
+      overflow: hidden;
+      overscroll-behavior: none;
+    } */
