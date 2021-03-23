@@ -2,7 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
-main {
+* {
     font-family: 'Catamaran', 'san-serif';
 }
 
@@ -14,6 +14,45 @@ main {
 a {
     text-decoration: none;
 }
+
+/* a.skip {
+  background: white;
+  left: 0;
+  padding: 7px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -50px;
+
+}
+
+
+a.skip:focus{
+  top: 10px;
+}
+
+*:focus{
+  border-top: 2px dashed;
+  border-bottom: 2px dashed;
+} */
+
+.skip a {
+    left: 0;
+    padding: 6px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+    position: absolute;
+    top: -40px;
+}
+
+.skip a:focus {
+    top: 6px;
+    color: #000000;
+    background: #d0d0d0;
+}
+
 
 /* Start Nav Mobile Dropdown */
 ul {
@@ -40,12 +79,8 @@ li a {
     color: #000000;
 }
 
-/* nav ul li a img {
-    width: 5%;
-} */
-
 nav li:hover, nav li:focus-within {
-    background: rgb(208, 208, 208);
+    background: #d0d0d0;
     cursor: pointer;
 }
 
@@ -76,21 +111,19 @@ ul li ul li {
 }
 /* End Nav Mobile Dropdown */
 
-#about-image {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 600px;
-    background-image: url('../images/home/752A4047-Edit-Edit-Edit-3.jpg');
-}
-
 h1 {
-    font-size: 3.5vw;
+    font-size: 26px;
+    text-align: center;
     font-weight: bold;
     padding-top: 20px;
-    padding-left: 20px;
+    padding-bottom: 20px;
     text-transform: uppercase;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    padding-top: 24px;
 }
 
 p {
@@ -98,31 +131,53 @@ p {
 }
 
 .gear {
-    display: grid;
-    grid-template-columns: auto;
-    justify-content: center;
-}
-
-.gear-text {
-    text-align: center;
-}
-
-.gear h2 {
-    text-align: center;
-    font-size: 2.5vw;
-}
-
-div.photo-grid {
-    width: 100%;
-    margin: auto;
-    padding: 30px;
-}
-
-
-.gallery {
     display: flex;
     justify-content: center;
     flex-direction: column;
+}
+
+.gear2 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.cameras {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lens {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#gear-text {
+    text-align: center;
+}
+
+.photo-containter {
+    padding-bottom: 50px;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 75%;
+    margin: auto;
+}
+
+.photo-link {
+    text-align: center;
+    color: #000000;
+    font-size: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .gallery img {
@@ -130,7 +185,6 @@ div.photo-grid {
 }
 
 footer p {
-    font-family: Catamaran, san-serif;
     text-align: center;
 }
 
@@ -164,7 +218,7 @@ footer p {
 } */
 
 /* Was prevously 880px */
-@media all and (min-width: 1000px){
+@media all and (min-width: 481px){
 
     /* header {
         background-color:  rgb(208, 208, 208);
@@ -182,7 +236,6 @@ footer p {
 
     nav ul li ul li {
         all:initial;
-        font-family: Catamaran, san-serif;
         text-transform: uppercase;
         /* text-transform: uppercase; */
         font-size: 1.5vw;
@@ -190,6 +243,7 @@ footer p {
 
     li a{
         padding: 8px;
+        font-size: 14px;
     }
 
     nav li {
@@ -206,7 +260,7 @@ footer p {
     }
 
     nav li:hover, nav li:focus-within {
-        background: rgb(255, 255, 255);
+        background: #FFFFFF;
         cursor: pointer;
     }
 
@@ -221,12 +275,17 @@ footer p {
         text-decoration: underline;
     }
 
-    h1 {
-        text-align: center;
+    #about-image {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        background-image: url('../images/photography/landscape/3p3a1846-twins_falls.jpg');
     }
 
-    .gear h2 {
-        text-align: left;
+    h1 {
+        font-size: 36px;
     }
 
     .body-text {
@@ -234,10 +293,25 @@ footer p {
         margin: auto;
     }
 
-    div.photo-grid {
-        width: 600px;
-        margin: auto;
-        padding: 30px;
+    .photo-grid {
+       grid-template-columns: 1fr 1fr;
+       width: 75%;
+       margin: auto;
+    }
+
+    .photo-containter {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .gear {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .gear img {
+        padding: 10px;
+        width: 400px;
     }
 
     .gallery {
@@ -249,17 +323,30 @@ footer p {
         padding: 10px;
         width: 600px;
     }
+
+    .gear2 {
+        /* display: grid; */
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
-@media all and (min-width: 1500px){
+@media all and (min-width: 769px){
+
+    main{
+        padding-top: 150px;
+    }
 
     header {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        /* position: fixed; */
+        position: fixed;
         height: 163px;
         background: #FFFFFF;
+    }
+
+    li a{
+        font-size: 14px;
     }
 
     #logo-header {
@@ -271,4 +358,7 @@ footer p {
         text-align: center;
     }
 
+    .gear2 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
