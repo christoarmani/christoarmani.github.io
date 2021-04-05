@@ -7,21 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHCHW6XYCF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FHCHW6XYCF');
+    </script>
     <title>Jim Porupski | Landscapes</title>
   </head>
 
   <body>
-    
-
-      <header>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
+    <header>
       <div id="logo-header"><a href="index.html"><img src="images/logo/jim_porupski_signature_black.png" alt="home"></a></div>
       <nav class="navigation">
         <ul>
-          <li><a href="#" aria-haspopup="true"><img src="images/nav/arrow_down.png" alt="arrown down"></a>
+          <li><div id="hide"><a href="#" aria-haspopup="true">Menu</div></a>
             <ul class="dropdown" aria-label="submenu">
               <li><a href="about.html">About</a></li>
-              <li><a class="active" href="photography.html">Photography</a></li>
-              <li><a href="gear.html">Gear</a></li>
+              <li><a href="photography.html">Photography</a></li>
+              <li><a class="active" href="gear.html">Gear</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </li>
@@ -29,26 +37,37 @@
       </nav>
       </header>
 
-      <main id="main">
-      <h1>Landscapes</h1>
+      <main>
+      <h1 id="main">Landscapes</h1>
 
-      <div class="gallery">
+    <div class="gallery_row">
+      <div class="gallery_column">
         <img id="image1" src="images/photography/landscape/3p3a0595-sodus_point_lighthouse.jpg" alt="sodus point lighthouse" />
         <img id="image2" src="images/photography/landscape/3p3a1039-havana_glen_falls.jpg" alt="havana glen falls" />
         <img id="image3" src="images/photography/landscape/3p3a1173-sodus_point_lighthouse.jpg" alt="sodus point lighthouse" />
         <img id="image4" src="images/photography/landscape/3p3a1786-deckertown_falls.jpg" alt="deckertown falls" />
+      </div>
+
+      <div class="gallery_column">
         <img id="image5" src="images/photography/landscape/3p3a1846-twins_falls.jpg" alt="twins falls" />
         <img id="image6" src="images/photography/landscape/3p3a2160-deans_cove.jpg" alt="deans cove" />
         <img id="image7" src="images/photography/landscape/3p3a2893-lightening_endicott_ny.jpg" alt="lightening endicott new york" />
         <img id="image8" src="images/photography/landscape/3p3a4756-sodus_point_lighthouse.jpg" alt="sodus point lighthouse" />
+      </div>
+
+      <div class="gallery_column">
         <img id="image9" src="images/photography/landscape/3p3a3497-taughannock_falls.jpg" alt="taughannock falls" />
         <img id="image10" src="images/photography/landscape/3p3a3576-kueka_outlet.jpg" alt="kueka outlet" />
         <img id="image11" src="images/photography/landscape/3p3a3593-deckertown_falls.jpg" alt="deckertown falls" />
+      </div>
+
+      <div class="gallery_column">
         <img id="image12" src="images/photography/landscape/3p3a3684-shequaga_falls.jpg" alt="shequaga falls" />
         <img id="image13" src="images/photography/landscape/3p3a5548-finger_lakes_forest.jpg" alt="finger lakes forest" />
         <img id="image14" src="images/photography/landscape/3p3a5576-finger_lakes_forest.jpg" alt="finger lakes forest" />
         <img id="image15" src="images/photography/landscape/3p3a9075-great_gully_falls.jpg" alt="great gully falls" />
       </div>
+    </div>
 
     </main>
     <footer>

@@ -7,20 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHCHW6XYCF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FHCHW6XYCF');
+    </script>
     <title>Jim Porupski | Photography</title>
   </head>
 
   <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-      <header>
+    <header>
       <div id="logo-header"><a href="index.html"><img src="images/logo/jim_porupski_signature_black.png" alt="home"></a></div>
       <nav class="navigation">
         <ul>
-          <li><a href="#" aria-haspopup="true"><img src="images/nav/arrow_down.png" alt="arrown down"></a>
+          <li><div id="hide"><a href="#" aria-haspopup="true">Menu</div></a>
             <ul class="dropdown" aria-label="submenu">
               <li><a href="about.html">About</a></li>
-              <li><a class="active" href="photography.html">Photography</a></li>
-              <li><a href="gear.html">Gear</a></li>
+              <li><a href="photography.html">Photography</a></li>
+              <li><a class="active" href="gear.html">Gear</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </li>
@@ -28,15 +37,79 @@
       </nav>
       </header>
 
-      <main id="main">
-      <h1>Photography</h1>
+      <main>
+      <h1 id="main">Photography</h1>
 
-      <div class="photo-grid">
+      <!-- <div class="photo-grid">
         <div class="photo-containter"><a href="backyard-birds.html"><img src="images/photography/backyard_birds/752a2429-red_bellied_woodpecker.jpg" alt="backyard birds"></a><a href="backyard-birds.html"><div class="photo-link">Backyard Birds</div></a></div>
         <div class="photo-containter"><a href="landscapes.html"><img src="images/photography/landscape/3p3a1846-twins_falls.jpg" alt="landscape"></a><a href="landscapes.html"><div class="photo-link">Landscapes</div></a></div>
         <div class="photo-containter"><a href="wildlife.html"><img src="images/photography/wildlife/752a2685-white_tailed_deer.jpg" alt="wildlife"></a><a href="wildlife.html"><div class="photo-link">Wildlife</div></a></div>
         <div class="photo-containter"><a href="miscellaneous.html"><img src="images/photography/miscellaneous/3p3a5123-covered_bridge_newfield_ny.jpg" alt="miscellaneous"></a><a href="miscellaneous.html"><div class="photo-link">Miscellaneous</div></a></div>
+      </div> -->
+
+      <div class="photo-grid">
+
+    <div class="flip-card-container">
+      <div class="flip-card"><a href="backyard-birds.html">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <div class="photo-container"><img src="images/photography/backyard_birds/752a2429-red_bellied_woodpecker.jpg" alt="backyard birds"></div>
+          </div>
+          <div class="flip-card-back">
+            <h1>Backyard Birds</h1>
+            <p>Birds from my backyard</p>
+          </div>
+        </div>
+      </a></div>
+      <a href="backyard-birds.html"><div class="photo-link">Backyard Birds</div></a>
+    </div>
+
+      <div class="flip-card-container">
+        <div class="flip-card"><a href="landscapes.html">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="photo-container"><img src="images/photography/landscape/3p3a1846-twins_falls.jpg" alt="landscape"></div>
+            </div>
+            <div class="flip-card-back">
+              <h1>Landscapes</h1>
+              <p>Various landscapes</p>
+            </div>
+          </div>
+        </a></div>
+        <a href="landscapes.html"><div class="photo-link">Landscapes</div></a>
       </div>
+
+        <div class="flip-card-container">
+          <div class="flip-card"><a href="wildlife.html">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <div class="photo-container"><img src="images/photography/wildlife/752a2685-white_tailed_deer.jpg" alt="wildlife"></div>
+              </div>
+              <div class="flip-card-back">
+                <h1>Wildlife</h1>
+                <p>Wildlife from travels</p>
+              </div>
+            </div>
+          </a></div>
+          <a href="wildlife.html"><div class="photo-link">Wildlife</div></a>
+        </div>
+
+          <div class="flip-card-container">
+            <div class="flip-card"><a href="miscellaneous.html">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <div class="photo-container"><img src="images/photography/miscellaneous/3p3a5123-covered_bridge_newfield_ny.jpg" alt="miscellaneous"></div>
+                </div>
+                <div class="flip-card-back">
+                  <h1>Miscellaneous</h1>
+                  <p>Miscellaneous photos</p>
+                </div>
+              </div>
+            </a></div>
+            <a href="miscellaneous.html"><div class="photo-link">Miscellaneous</div></a>
+          </div>
+
+    </div>
 
     </main>
     <footer>

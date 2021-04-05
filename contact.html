@@ -7,35 +7,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHCHW6XYCF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FHCHW6XYCF');
+    </script>
     <title>Jim Porupski | Contact</title>
   </head>
 
   <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-      <header>
+    <header>
       <div id="logo-header"><a href="index.html"><img src="images/logo/jim_porupski_signature_black.png" alt="home"></a></div>
       <nav class="navigation">
         <ul>
-          <li><a href="#" aria-haspopup="true"><img src="images/nav/arrow_down.png" alt="arrow down"></a>
+          <li><div id="hide"><a href="#" aria-haspopup="true">Menu</div></a>
             <ul class="dropdown" aria-label="submenu">
               <li><a href="about.html">About</a></li>
               <li><a href="photography.html">Photography</a></li>
-              <li><a href="gear.html">Gear</a></li>
-              <li><a class="active" href="contact.html">Contact</a></li>
+              <li><a class="active" href="gear.html">Gear</a></li>
+              <li><a href="contact.html">Contact</a></li>
             </ul>
           </li>
         </ul>
       </nav>
       </header>
 
-
+      <main>
       <div id="contact-image"></div>
 
-      <main id="main">
-      <h1>Contact</h1>
+      <h1 id="main">Contact</h1>
 
+    <div class="body-text">
+      <p>For all pricing and booking inquiries , please fill out the form below. Please include as much relevant information as possible, for example, the location of the project, amount of images needed, intended usage of the images, and timeframe for project completion. I look forward to hearing from you.</p>
+    </div>
 
+      <form action="https://formspree.io/f/mrgrggna" method="POST">
+        <fieldset>
+          <div class="contact-container">
+          <legend>Contact me</legend>
 
+          <label for="firstname">First Name</label>
+          <input type="text" name = "firstname" id="firstname" placeholder="First name">
+
+          <label for="lastname">Last Name</label>
+          <input type="text" name = "lastname" id="lastname" placeholder="Last name">
+
+          <label for="email">Email Address</label>
+          <input type="email" name="email" id="email" placeholder="example@gmail.com">
+
+          <label for="subject">Subject</label>
+          <input type="text" name = "subject" id="subject" placeholder="Subject">
+
+          <label for="msg">Leave a message</label>
+          <textarea name="msg" id="msg" placeholder="Enter your message"></textarea>
+
+          <input type="submit" value="Submit"></input>
+          </div>
+        </fieldset>
+      </form>
 
     </main>
     <footer>

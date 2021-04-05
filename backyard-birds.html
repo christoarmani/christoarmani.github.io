@@ -7,20 +7,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FHCHW6XYCF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-FHCHW6XYCF');
+    </script>
     <title>Jim Porupski | Backyard Birds</title>
   </head>
 
   <body>
     <div class="skip"><a href="#main">Skip to Main Content</a></div>
-      <header>
+    <header>
       <div id="logo-header"><a href="index.html"><img src="images/logo/jim_porupski_signature_black.png" alt="home"></a></div>
       <nav class="navigation">
         <ul>
-          <li><a href="#" aria-haspopup="true"><img src="images/nav/arrow_down.png" alt="arrown down"></a>
+          <li><div id="hide"><a href="#" aria-haspopup="true">Menu</div></a>
             <ul class="dropdown" aria-label="submenu">
               <li><a href="about.html">About</a></li>
-              <li><a class="active" href="photography.html">Photography</a></li>
-              <li><a href="gear.html">Gear</a></li>
+              <li><a href="photography.html">Photography</a></li>
+              <li><a class="active" href="gear.html">Gear</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </li>
@@ -28,26 +37,37 @@
       </nav>
       </header>
 
-      <main id="main">
-      <h1>Backyard Birds</h1>
+      <main>
+      <h1 id="main">Backyard Birds</h1>
 
-      <div class="gallery">
+    <div class="gallery_row">
+      <div class="gallery_column">
         <img id="image1" src="images/photography/backyard_birds/752a0406-cape_may_warbler.jpg" alt="cape may warbler" />
         <img id="image2" src="images/photography/backyard_birds/752a0778-female_grosbeak.jpg" alt="female grosbeak" />
         <img id="image3" src="images/photography/backyard_birds/752a0985-female_cardinal.jpg" alt="female cardinal" />
         <img id="image4" src="images/photography/backyard_birds/752a1067-long_billed_thrasher.jpg" alt="long billed thrasher" />
+      </div>
+
+      <div class="gallery_column">
         <img id="image5" src="images/photography/backyard_birds/752a1135-cow_bird.jpg" alt="cow bird" />
         <img id="image6" src="images/photography/backyard_birds/752a2429-red_bellied_woodpecker.jpg" alt="red bellied woodpecker" />
         <img id="image7" src="images/photography/backyard_birds/752a2723-white_breasted_nut_hatch.jpg" alt="white breasted nut hatch" />
         <img id="image8" src="images/photography/backyard_birds/752a3448-female_house_finch.jpg" alt="female house finch" />
+      </div>
+
+      <div class="gallery_column">
         <img id="image9" src="images/photography/backyard_birds/752a4165-male_house_finch.jpg" alt="male house finch" />
         <img id="image10" src="images/photography/backyard_birds/752a4341-male_cardinal.jpg" alt="male cardinal" />
         <img id="image11" src="images/photography/backyard_birds/752a4610-tufted_titmouse.jpg" alt="tufted titmouse" />
         <img id="image12" src="images/photography/backyard_birds/752a4892-black_capped_chickadee.jpg" alt="black capped chickadee" />
-        <img id="image13" src="images/photography/backyard_birds/752a4923-red_breasted_nut_hatch.jpg" alt="red breasted nuthatch" />
+      </div>
+
+      <div class="gallery_column">
         <img id="image14" src="images/photography/backyard_birds/752a7584-female_cardinal.jpg" alt="female cardinal" />
+        <img id="image13" src="images/photography/backyard_birds/752a4923-red_breasted_nut_hatch.jpg" alt="red breasted nuthatch" />
         <img id="image15" src="images/photography/backyard_birds/752a9355-eastern_bluebird.jpg" alt="eastern bluebird" />
       </div>
+    </div>
 
     </main>
     <footer>
