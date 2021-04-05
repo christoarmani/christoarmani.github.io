@@ -15,34 +15,12 @@ a {
     text-decoration: none;
 }
 
-/* a.skip {
-  background: white;
-  left: 0;
-  padding: 7px;
-  -webkit-transition: top 1s ease-out;
-  transition: top 1s ease-out;
-  z-index: 1;
-  position: absolute;
-  top: -50px;
-
-}
-
-
-a.skip:focus{
-  top: 10px;
-}
-
-*:focus{
-  border-top: 2px dashed;
-  border-bottom: 2px dashed;
-} */
-
 .skip a {
     left: 0;
     padding: 6px;
     -webkit-transition: top 1s ease-out;
     transition: top 1s ease-out;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     top: -40px;
 }
@@ -73,6 +51,7 @@ nav li {
     text-transform: uppercase;
     transition-duration: 0.5s;
     text-align: center;
+    z-index: 2;
 }
 
 li a {
@@ -153,19 +132,16 @@ p {
     justify-content: center;
 }
 
-#gear-text {
+.gear-text {
     text-align: center;
-}
-
-.photo-containter {
-    padding-bottom: 50px;
 }
 
 .photo-grid {
     display: grid;
     grid-template-columns: 1fr;
-    width: 75%;
     margin: auto;
+    row-gap: 50px;
+    max-width: 1100px;
 }
 
 .photo-link {
@@ -174,18 +150,127 @@ p {
     font-size: 20px;
 }
 
-.gallery {
+footer p {
+    text-align: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    margin: auto;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+.gallery_row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+.gallery_row img:hover {
+    filter: grayscale(100%);
 }
 
-.gallery img {
-    padding: 10px;
+.gallery_column img {
+    padding: 5px 10px 5px 10px;
 }
 
-footer p {
-    text-align: center;
+.contact-container {
+    margin: auto;
+    padding: 0 15px 0 15px;
+}
+
+legend {
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: default;
+    margin: auto;
+}
+
+label {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: default;
+    padding: 0 10px 0 0;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+textarea {
+    background-color: #eeeeee;
+    border: 3px solid #f1f1f1;
+    border-radius: 5px;
+    margin: 8px 0;
+    height: 100px;
+    width: 100%;
+}
+
+textarea:focus {
+    border: 2px solid #000000;
+    border-radius: 5px;
+}
+
+input[type=submit] {
+    background-color: #000000;
+    color: #FFFFFF;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -217,6 +302,7 @@ footer p {
 
 } */
 
+
 /* Was prevously 880px */
 @media all and (min-width: 481px){
 
@@ -227,6 +313,10 @@ footer p {
     #logo-header {
         width: 25%;
         margin: auto;
+    }
+
+    #hide {
+        display: none;
     }
 
 /* Start Nav Reset */
@@ -284,8 +374,26 @@ footer p {
         background-image: url('../images/photography/landscape/3p3a1846-twins_falls.jpg');
     }
 
+    #gear-image {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        background-image: url('../images/photography/wildlife/752a7337-juvenile_bald_eagle.jpg');
+    }
+
+    #contact-image {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 600px;
+        background-image: url('../images/photography/landscape/3p3a9075-great_gully_falls.jpg');
+    }
+
     h1 {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     .body-text {
@@ -293,16 +401,28 @@ footer p {
         margin: auto;
     }
 
-    .photo-grid {
-       grid-template-columns: 1fr 1fr;
-       width: 75%;
-       margin: auto;
+    .photo-container {
+        width: 100%;
+        height: 100%;
     }
 
-    .photo-containter {
-        padding-left: 10px;
-        padding-right: 10px;
+    .photo-container img {
+        width: 100%;
+        height: 100%;
     }
+
+    .flip-card-container {
+        width: 100%;
+        height: 100%;
+    }
+    .flip-card {
+        background-color: transparent;
+         width: 400px;
+        height: 280px; 
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; 
+        margin: auto;
+      }
 
     .gear {
         flex-wrap: wrap;
@@ -314,26 +434,49 @@ footer p {
         width: 400px;
     }
 
-    .gallery {
-        flex-wrap: wrap;
-        flex-direction: row;
-    }
-
-    .gallery img{
-        padding: 10px;
-        width: 600px;
-    }
-
     .gear2 {
-        /* display: grid; */
         grid-template-columns: 1fr 1fr;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+        padding: 0 15px 0 15px;
+    }
+
+    legend {
+        font-size: 20px;
+        margin: 0;
+        padding: 10px 0 10px 0;
+    }
+
+    label {
+        margin-right: 10px;
+        padding: 0 10px 0 0;
+    }
+
+    input {
+        padding: 12px 20px;
+        margin: 8px 0;
+    }
+
+    textarea {
+        margin: 8px 0;
+        height: 100px;
     }
 }
 
-@media all and (min-width: 769px){
+/* was previously 769px */
+@media all and (min-width: 905px){
 
     main{
-        padding-top: 150px;
+        padding-top: 140px;
     }
 
     header {
@@ -341,11 +484,12 @@ footer p {
         justify-content: space-around;
         align-items: center;
         position: fixed;
-        height: 163px;
+        height: 140px;
         background: #FFFFFF;
+        z-index: 1;
     }
 
-    li a{
+    li a {
         font-size: 14px;
     }
 
@@ -360,5 +504,70 @@ footer p {
 
     .gear2 {
         grid-template-columns: 1fr 1fr 1fr;
+        max-width: 1100px;
+    }
+
+    .gallery_row {
+        padding: 0 20px 0 20px;
+    }
+
+    .gallery_column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .gallery_column img {
+        vertical-align: middle;
+        width: 100%;
+        padding: 8px 8px 8px 8px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+        row-gap: 50px;
+        margin: auto;
+     }
+
+    .photo-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .photo-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .flip-card-container {
+        width: 100%;
+        height: 100%;
+    }
+    .flip-card {
+         background-color: transparent;
+         width: 450px;
+         height: 300px;
+         border: 1px solid #f1f1f1;
+         perspective: 1000px; /* Remove this if you don't want the 3D effect */
+         margin: auto;
+       }
+}
+
+@media (prefers-reduced-motion){
+
+    .flip-card-inner {
+        transition: none;
+        transform-style: none;
+    }
+
+    .flip-card:hover .flip-card-inner {
+        transform: none;
     }
 }
+
+@media screen and (-webkit-min-device-pixel-ratio:0){
+    .flip-card-front {
+        -webkit-backface-visibility: visible;
+    }
+}
+
