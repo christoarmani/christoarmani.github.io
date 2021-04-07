@@ -7,7 +7,7 @@ html {
 }
 
 #logo-header {
-    width: 50%;
+    width: 225px;
     margin: auto;
 }
 
@@ -174,7 +174,7 @@ footer p {
   }
   
   /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
+  .flip-card:hover .flip-card-inner, .flip-card:focus-within     {
     transform: rotateY(180deg);
   }
   
@@ -194,7 +194,7 @@ footer p {
   }
   
   /* Style the back side */
-  .flip-card-back {
+  .flip-card-back, .flip-card:focus-within {
     background-color: rgba(0,0,0,0.4);
     color: white;
     transform: rotateY(180deg);
@@ -205,10 +205,6 @@ footer p {
     flex-wrap: wrap;
     justify-content: center;
   }
-
-.gallery_row img:hover {
-    filter: grayscale(100%);
-}
 
 .gallery_column img {
     padding: 5px 10px 5px 10px;
@@ -310,11 +306,6 @@ input[type=submit]:hover {
         background-color:  rgb(208, 208, 208);
     } */
 
-    #logo-header {
-        width: 25%;
-        margin: auto;
-    }
-
     #hide {
         display: none;
     }
@@ -399,6 +390,15 @@ input[type=submit]:hover {
     .body-text {
         max-width: 80%;
         margin: auto;
+    }
+
+    .gallery_column img {
+        opacity: 0.7;
+    }
+
+    .gallery_column img:hover {
+        /* filter: grayscale(100%); */
+        opacity: 1.0;
     }
 
     .photo-container {
@@ -486,16 +486,12 @@ input[type=submit]:hover {
         position: fixed;
         height: 140px;
         background: #FFFFFF;
+        max-width: 1100px;
         z-index: 1;
     }
 
     li a {
         font-size: 14px;
-    }
-
-    #logo-header {
-        margin: 0;
-        width: 20%;
     }
 
     h1 {
