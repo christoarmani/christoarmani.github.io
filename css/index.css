@@ -89,10 +89,10 @@
   }
 
 
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion){
 
   body {
-    animation: none;
+    animation-play-state: paused;
     background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
   }
 }
