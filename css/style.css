@@ -417,7 +417,7 @@ input[type=submit]:hover {
     }
     .flip-card {
         background-color: transparent;
-         width: 400px;
+        width: 400px;
         height: 280px; 
         border: 1px solid #f1f1f1;
         perspective: 1000px; 
@@ -479,14 +479,24 @@ input[type=submit]:hover {
         padding-top: 140px;
     }
 
+    /* .nav_container {
+        max-width: 1100px;
+        margin: auto;
+    } */
+
+    #logo-header {
+        width: 225px;
+        margin: 0 0 0 30px;
+    }
+
     header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         position: fixed;
         height: 140px;
         background: #FFFFFF;
-        max-width: 1100px;
+        width: 100%;
         z-index: 1;
     }
 
@@ -562,6 +572,7 @@ input[type=submit]:hover {
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0){
+
     .flip-card-front {
         -webkit-backface-visibility: visible;
     }
