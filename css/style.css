@@ -569,6 +569,18 @@ input[type=submit]:hover {
     .flip-card:hover .flip-card-inner {
         transform: none;
     }
+
+    #about-image {
+        background-attachment: revert;
+    }
+
+    #gear-image {
+        background-attachment: revert;
+    }
+
+    #contact-image {
+        background-attachment: revert;
+    }
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0){
