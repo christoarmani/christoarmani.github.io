@@ -1,93 +1,92 @@
 * {
-    font-family: "Catamaran", san-serif;
-    text-transform: uppercase;
-    overflow: hidden;
-  }
+  font-family: "Catamaran", san-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+}
 
-  #logo-header img {
-    margin: auto;
-    position: relative;
-  }
+#logo-header img {
+  margin: auto;
+  position: relative;
+}
 
-  header {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding-bottom: 10px;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    background-color: rgba(40, 40, 40, .30);
-    z-index: 1;
-  }
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding-bottom: 10px;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(40, 40, 40, .30);
+  z-index: 1;
+}
 
-  h1 {
-    color: #FFFFFF;
-    text-align: center;
-    padding: 20px;
-  }
+h1 {
+  color: #FFFFFF;
+  text-align: center;
+  padding: 20px;
+}
 
-  a {
-    text-decoration: none;
-    color: #FFFFFF;
-  }
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 
-  a:hover {
-    filter: drop-shadow(8px 8px 8px #282828);
-    text-decoration: underline;
-  }
+a:hover {
+  filter: drop-shadow(8px 8px 8px #282828);
+  text-decoration: underline;
+}
 
-  nav ul li {
-    text-decoration: none;
-    text-align: center;
-  }
+nav ul li {
+  text-decoration: none;
+  text-align: center;
+}
 
-  main {
-    height: 100vh;
-    -webkit-animation: gallery 10s infinite;
-    -webkit-animation-timing-function: ease-in-out;
-    animation: gallery 10s infinite;
-    animation-timing-function: ease-in-out;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color:black;
-    overflow: hidden;
-    z-index: 0;
-  }
+main {
+  height: 100vh;
+  -webkit-animation: gallery 10s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  animation: gallery 10s infinite;
+  animation-timing-function: ease-in-out;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color:black;
+  overflow: hidden;
+  z-index: 0;
+}
 
-  body::before {
-    background-color:black;
-  }
+body::before {
+  background-color:black;
+}
 
-  @-webkit-keyframes gallery {
-    0% {
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
-    50% {
-      background-image: url("../images/home/3p3a4756-sodus_point_lighthouse.jpg");
-    }
-    100% {
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
+@-webkit-keyframes gallery {
+  0% {
+    background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
   }
-
-  @keyframes gallery {
-    0% {
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
-    50% {
-      background-image: url("../images/home/3p3a4756-sodus_point_lighthouse.jpg");
-    }
-    100% {
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
+  50% {
+    background-image: url("../images/home/3p3a4756-sodus_point_lighthouse.jpg");
   }
-
-  footer p {
-    display: none;
-    text-align: center;
+  100% {
+    background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
   }
+}
 
+@keyframes gallery {
+  0% {
+    background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
+  }
+  50% {
+    background-image: url("../images/home/3p3a4756-sodus_point_lighthouse.jpg");
+  }
+  100% {
+    background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
+  }
+}
+
+footer p {
+  display: none;
+  text-align: center;
+}
 
 @media (prefers-reduced-motion){
 
@@ -98,78 +97,33 @@
   }
 }
 
-  @media all and (min-width: 481px){
+/* Tablet width */
+@media all and (min-width: 481px){
 
-    nav ul li {
-      display: inline-block;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    ul {
-      text-align: center;
-    }
+  nav ul li {
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
-  @media all and (min-width: 769px){
+  ul {
+    text-align: center;
+  }
+}
 
-    h1 {
-      color: #FFFFFF;
-      font-size: medium;
-      padding-bottom: 20px;
-      width: 70%;
-      margin: auto;
-    }
+/* Desktop width */
+@media all and (min-width: 769px){
 
-    nav ul li {
-      font-size: large;
-    }
-
+  h1 {
+    color: #FFFFFF;
+    font-size: medium;
+    padding-bottom: 20px;
+    width: 70%;
+    margin: auto;
   }
 
-
-/* 
-  @-webkit-keyframes gallery {
-    0% {
-      opacity: 1;
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
-    25% {
-      opacity: .8;
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
-    50% {
-      opacity: .8;
-      background-image: url("../images/home/3p3a4756-sodus_point_lighthouse.jpg");
-    }
-    75% {
-      opacity: 1;
-      background-image: url("../images/home/3p3a4756-sodus_point_lighthouse.jpg");
-    }
-    100% {
-      opacity: .8;
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
+  nav ul li {
+    font-size: large;
   }
 
-  @keyframes gallery {
-    0% {
-      opacity: 1;
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
-    25% {
-      opacity: .8;
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    }
-    50% {
-      opacity: .8;
-      background-image: url("../images/home/3p3a4756-sodus_point_lighthouse.jpg");
-    }
-    75% {
-      opacity: 1;
-      background-image: url("../images/home/3p3a4756-sodus_point_lighthouse.jpg");
-    }
-    100% {
-      opacity: 1;
-      background-image: url("../images/home/3p3a4980-fall_foilage.jpg");
-    } */
+}

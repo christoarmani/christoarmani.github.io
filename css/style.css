@@ -6,7 +6,13 @@ html {
     font-family: 'Catamaran', 'san-serif';
 }
 
-#logo-header {
+#logo-black {
+    width: 225px;
+    margin: auto;
+}
+
+#logo-white {
+    display: none;
     width: 225px;
     margin: auto;
 }
@@ -31,6 +37,11 @@ a {
     background: #d0d0d0;
 }
 
+.skip a:after {
+    top: -6px;
+    color: #000000;
+    background: #d0d0d0;
+}
 
 /* Start Nav Mobile Dropdown */
 ul {
@@ -158,53 +169,53 @@ footer p {
     background-color: transparent;
     width: 300px;
     height: 200px;
-    border: 1px solid #f1f1f1;
+    /* border: 1px solid #f1f1f1; */
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin: auto;
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner, .flip-card:focus-within     {
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner, .flip-card:focus-within {
     transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
     -webkit-backface-visibility: hidden; /* Safari */
     backface-visibility: hidden;
-  }
-  
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
     background-color: #bbb;
     color: black;
-  }
-  
-  /* Style the back side */
-  .flip-card-back, .flip-card:focus-within {
+}
+
+/* Style the back side */
+.flip-card-back, .flip-card:focus-within {
     background-color: rgba(0,0,0,0.4);
     color: white;
     transform: rotateY(180deg);
-  }
+}
 
 .gallery_row {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
+}
 
 .gallery_column img {
     padding: 5px 10px 5px 10px;
@@ -269,42 +280,8 @@ input[type=submit]:hover {
     opacity: 0.8;
 }
 
-/* @media (prefers-color-scheme: dark) {
-    main {
-        background: #363636;
-    }
-
-    nav li {
-        color: #fdfdfd;
-        background: #363636;
-    }
-
-    nav li:hover, nav li:focus-within {
-        background: rgb(138, 138, 138);
-    }
-
-    h1 {
-        color: #fdfdfd;
-    }
-
-    p {
-        color: #fdfdfd;
-    }
-
-    footer {
-        color: #fdfdfd;
-        background: #363636;
-    }
-
-} */
-
-
-/* Was prevously 880px */
+/* Tablet width: Was prevously 880px */
 @media all and (min-width: 481px){
-
-    /* header {
-        background-color:  rgb(208, 208, 208);
-    } */
 
     #hide {
         display: none;
@@ -318,7 +295,6 @@ input[type=submit]:hover {
     nav ul li ul li {
         all:initial;
         text-transform: uppercase;
-        /* text-transform: uppercase; */
         font-size: 1.5vw;
     }
 
@@ -347,7 +323,6 @@ input[type=submit]:hover {
 
     nav li a:hover, a:target {
         text-decoration: underline;
-        /* font-weight: bold; */
         cursor: pointer;
     }
 /* End Nav Reset */
@@ -415,14 +390,11 @@ input[type=submit]:hover {
         width: 100%;
         height: 100%;
     }
+
     .flip-card {
-        background-color: transparent;
         width: 400px;
-        height: 280px; 
-        border: 1px solid #f1f1f1;
-        perspective: 1000px; 
-        margin: auto;
-      }
+        height: 280px;
+    }
 
     .gear {
         flex-wrap: wrap;
@@ -472,20 +444,18 @@ input[type=submit]:hover {
     }
 }
 
-/* was previously 769px */
+/* Desktop width: Was previously 769px */
 @media all and (min-width: 905px){
 
     main{
         padding-top: 140px;
     }
 
-    /* .nav_container {
-        max-width: 1100px;
-        margin: auto;
-    } */
+    #logo-black {
+        margin: 0 0 0 30px;
+    }
 
-    #logo-header {
-        width: 225px;
+    #logo-white {
         margin: 0 0 0 30px;
     }
 
@@ -533,30 +503,114 @@ input[type=submit]:hover {
         column-gap: 5px;
         row-gap: 50px;
         margin: auto;
-     }
-
-    .photo-container {
-        width: 100%;
-        height: 100%;
     }
 
-    .photo-container img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .flip-card-container {
-        width: 100%;
-        height: 100%;
-    }
     .flip-card {
-         background-color: transparent;
          width: 450px;
          height: 300px;
-         border: 1px solid #f1f1f1;
-         perspective: 1000px; /* Remove this if you don't want the 3D effect */
-         margin: auto;
-       }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #262626;
+    }
+
+    header {
+        background: #262626;
+    }
+
+    #logo-black {
+        display: none;
+    }
+
+    #logo-white {
+        display: block;
+    }
+
+    nav li {
+        color: #fdfdfd;
+        background: #262626;
+    }
+
+    nav ul {
+        background: #262626;
+    }
+
+    nav ul li {
+        background: #262626;
+    }
+
+    nav ul li a {
+        color: #fdfdfd;
+    }
+
+    nav li:hover, nav li:focus-within {
+        background: #262626;
+    }
+
+    h1 {
+        color: #fdfdfd;
+    }
+
+    p {
+        color: #fdfdfd;
+    }
+
+    h2 {
+        color: #fdfdfd;
+    }
+
+    .lens {
+        color: #fdfdfd;
+    }
+
+    .gear-text {
+        color: #fdfdfd;
+    }
+
+    .photo-link {
+        color: #fdfdfd;
+    }
+
+    legend {
+        color:#fdfdfd;
+    }
+
+    label {
+        color:#fdfdfd;
+    }
+
+    input {
+        color:#000000;
+        background-color: #b7b7b7;
+    }
+
+    input:focus {
+        border: 2px solid #fdfdfd;
+    }
+
+    textarea {
+        background-color: #b7b7b7;
+        border: 3px solid #b7b7b7;
+    }
+
+    textarea:focus {
+        border: 2px solid #fdfdfd;
+    }
+
+    input[type=submit] {
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+
+    input[type=submit]:hover {
+        opacity: 0.8;
+    }
+
+    footer {
+        color: #fdfdfd;
+    }
 }
 
 @media (prefers-reduced-motion){
